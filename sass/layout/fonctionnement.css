@@ -1,0 +1,65 @@
+/*Fonctionnement*/
+.fonctionnement {
+  counter-reset: Futur4;
+  margin-bottom: 25px;
+}
+
+.fonctionnement ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+.fonctionnement li {
+  background-color: #f6f6f6;
+  padding: 20px 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.46);
+          box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.46);
+  -webkit-transition: -webkit-transform 350ms;
+  transition: -webkit-transform 350ms;
+  transition: transform 350ms;
+  transition: transform 350ms, -webkit-transform 350ms;
+  list-style-type: none;
+  position: relative;
+}
+
+.fonctionnement li:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.fonctionnement li i.fas {
+  margin-right: 15px;
+  color: #7e7e7e;
+}
+
+.fonctionnement li::before {
+  content: counter(Futur4);
+  counter-increment: Futur4;
+  color: white;
+  background-color: #9356dc;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  left: -15px;
+}
+/*# sourceMappingURL=fonctionnement.css.map */

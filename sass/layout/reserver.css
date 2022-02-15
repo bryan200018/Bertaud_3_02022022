@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*Reserver*/
+.Reserver {
+  text-align: center;
+}
+
+.Reserver h2 {
+  margin-top: 40px;
+  font-size: 27px;
+}
+
+.Reserver p {
+  font-size: 20px;
+  opacity: 60%;
+}
+
+.ButtonExplorer {
+  height: 60px;
+  width: 240px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  -webkit-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.46);
+          box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.46);
+  background: linear-gradient(357deg, #9356dc 18%, #ff79da 90%);
+  /*CSS Gradient — Generator, Maker, and Background*/
+  margin-top: 15px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+}
+
+.ButtonExplorer:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.9;
+}
+/*# sourceMappingURL=reserver.css.map */

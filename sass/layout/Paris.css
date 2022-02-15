@@ -1,0 +1,24 @@
+/*Paris*/
+.Lieux {
+  background-color: #e2e2e2;
+  text-align: center;
+  padding: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  opacity: 70%;
+  font-size: 14px;
+}
+
+.Lieux i {
+  font-size: 23px;
+  padding-bottom: 4px;
+}
+/*# sourceMappingURL=Paris.css.map */
