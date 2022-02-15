@@ -1,0 +1,14 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "openclassrooms p3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style.scss:./public/css/style.css"
+  },
+  "author": "bryan",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.49.7"
+  }
+}

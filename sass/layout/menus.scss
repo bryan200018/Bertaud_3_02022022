@@ -1,0 +1,23 @@
+.menus{
+    background-color: #f6f6f6;
+    h2{
+        margin-bottom: 25px;
+    }
+
+    .MenusCards{
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        border: 1px solid black;
+        height: 40px;
+        flex-grow: 1;
+        min-width: 48%;
+        
+        &.card__image{
+            background-image: url("../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        }
+    }
+}

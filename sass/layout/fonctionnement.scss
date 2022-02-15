@@ -1,0 +1,54 @@
+@import "../utils/zoom.scss";
+@import "../utils/color.scss";
+
+
+/*Fonctionnement*/
+
+.fonctionnement{
+    counter-reset: Futur4;
+    margin-bottom: 25px;
+
+    & ol{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    & li{
+        background-color: #f6f6f6;
+        padding: 20px 20px;
+        flex-grow: 1;
+        border-radius: 12px;
+        box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.46);
+        transition: transform 350ms;
+        list-style-type: none;
+        position: relative;
+    }
+
+    & li:hover{
+        @include zoom;
+        opacity: 0.9;
+    }
+
+    & li i.fas{
+        margin-right: 15px;
+        color: #7e7e7e;
+    }
+
+    & li::before{
+        content: counter(Futur4);
+        counter-increment: Futur4;
+        color: white;
+        background-color: $Primaire;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 15px;
+        left: -15px;
+
+    }
+}

@@ -1,0 +1,17 @@
+/*Paris*/
+
+.Lieux{
+    background-color: #e2e2e2;
+    text-align: center;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 70%;
+    font-size: 14px;
+    & i {
+        font-size: 23px;
+        padding-bottom: 4px;
+    }
+}
