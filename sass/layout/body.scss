@@ -1,0 +1,152 @@
+@import "../utils/color.scss";
+@import "../utils/zoom.scss";
+
+
+/*Fonctionnement*/
+
+.fonctionnement{
+    counter-reset: Futur4;
+    margin-bottom: 25px;
+
+    & ol{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    & li{
+        background-color: #f6f6f6;
+        padding: 20px 20px;
+        flex-grow: 1;
+        border-radius: 12px;
+        box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.46);
+        transition: transform 350ms;
+        list-style-type: none;
+        position: relative;
+    }
+
+    & li:hover{
+        @include zoom;
+        opacity: 0.9;
+    }
+
+    & li i.fas{
+        margin-right: 15px;
+        color: #7e7e7e;
+    }
+
+    & li::before{
+        content: counter(Futur4);
+        counter-increment: Futur4;
+        color: white;
+        background-color: $Primaire;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 15px;
+        left: -15px;
+
+    }
+}
+
+/*Menus*/
+
+
+.menus{
+    background-color: #f6f6f6;
+    padding: 30px 20px;
+
+    h2{
+        margin-bottom: 25px;
+    }
+
+    .MenusCards{
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+
+        .Nouveau{
+            position: relative;
+        }
+
+        .Nouveau::before{
+            content: "Nouveau";
+            position: absolute;
+            height: 30px;
+            width: 80px;
+            background-color: $Tertiaire;
+            text-align: center;
+            padding-top: 5px;
+            border-radius: 2px;
+            top: 15px;
+            right: 15px;
+            color: #299177;
+        }
+    }
+
+    .card{
+        flex-grow: 1;
+        min-width: 48%;
+        
+        & .card__image{            
+        height: 250px;
+        background-size: cover;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        }
+
+        &__image-1{            
+            background-image: url("../../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        }
+
+        &__image-2{            
+            background-image: url("../../image/stil-u2Lp8tXIcjw-unsplash.jpg");
+        }
+
+        &__image-3{            
+            background-image: url("../../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+        }
+
+        &__image-4{            
+            background-image: url("../../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+        }
+
+        &__description{
+            position: relative;
+            background-color: white;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+
+            h3,p{
+                padding: 10px;
+                margin: 0;
+            }
+
+            i{
+                font-size: 30px;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .fas{
+                color: transparent;
+                background-image: linear-gradient(200deg, #9356dc 18%, #ff79da 90%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: 300ms;
+            }
+
+            &:hover .fas{
+                opacity: 1;
+                transform: translateY(-50%) scale(1.2);
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import "../utils/color.scss";
+
+footer{
+    background-color: $FooterColor;
+    padding: 15px 30px;
+    color: white;
+
+    h2{
+        font-family: "Shrikhand", "sans-serif";
+        font-weight: 500;
+        padding: 15px 0;
+    }
+
+}

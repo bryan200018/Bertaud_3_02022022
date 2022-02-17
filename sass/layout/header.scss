@@ -1,3 +1,6 @@
+@import "../utils/zoom.scss";
+@import "../utils/color.scss";
+
 /*Header*/
 
 header{
@@ -5,5 +8,64 @@ header{
     text-align: center;
     box-shadow: 0 0 8px rgb(0 0 0 / 80%);
     padding: 1px;
-    position: relative; /* Permet de faire réaparaître notre box shadow grace au positioning  */
+    position: relative; /* Permet de faire réaparaître la box shadow grace au positioning  */
+}
+
+/*Lieux Paris..*/
+
+.Lieux{
+    background-color: #e2e2e2;
+    text-align: center;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 70%;
+    font-size: 14px;
+
+    & i {
+        font-size: 23px;
+        padding-bottom: 4px;
+    }
+}
+
+/*Reserver*/
+
+.Reserver{
+    text-align: center;
+    background-color: #f6f6f6;
+    height: 350px;
+
+    & h2{
+        margin-top: 0;
+        padding-top: 55px;
+        font-size: 27px;
+    }
+
+    & p{
+        font-size: 20px;
+        opacity: 60%;
+    }
+}
+
+/*Explorer*/
+
+.ButtonExplorer{
+    height: 60px;
+    width: 240px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.46);
+    background-image: linear-gradient(357deg, rgba(147,86,220,1) 18%, rgba(255,121,218,1) 90%);/*CSS Gradient — Generator, Maker, and Background*/
+    margin-top: 15px;
+    cursor: pointer;
+    transition: transform 450ms;
+
+    &:hover{
+        @include zoom;
+        opacity: 0.9;   
+    }
 }
