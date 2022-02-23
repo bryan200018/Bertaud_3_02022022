@@ -1,7 +1,7 @@
-@import "../utils/color.scss";
+@use "../utils/color";
 
 footer{
-    background-color: $FooterColor;
+    background-color: color.$FooterColor;
     padding: 15px 30px;
     color: white;
 

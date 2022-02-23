@@ -1,5 +1,5 @@
-@import "../utils/zoom.scss";
-@import "../utils/color.scss";
+@use "../utils/mixins";
+@use "../utils/color";
 
 /*Header*/
 
@@ -65,7 +65,7 @@ header{
     transition: transform 450ms;
 
     &:hover{
-        @include zoom;
+        @include mixins.zoom;
         opacity: 0.9;   
     }
 }

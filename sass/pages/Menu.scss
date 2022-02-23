@@ -1,0 +1,30 @@
+@use "../utils/mixins.scss";
+
+.image1 img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.Menu__main {
+    padding: 0 15px;
+
+    h2{
+    font-family: "Shrikhand","sans-serif";
+    position: relative;
+
+        &::before{
+            @include mixins.Heart;
+        }
+        
+        &::after{
+            @include mixins.Heart($opacity: 0, $font-weight: 900,
+            $color: transparent);
+            @include mixins.gradient;
+        }
+
+        &:hover::after{
+            opacity: 1;
+            transform: translateY(-50%) scale(1.11);
+        }
+    }
+}
