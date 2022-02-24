@@ -1,30 +1,130 @@
 @use "../utils/mixins.scss";
+@use "../utils/color.scss";
+@use "../utils/variables.scss";
+@use "../utils/animation.scss";
 
-.image1 img{
-    width: 100%;
-    object-fit: cover;
-}
+#page-resto{
 
-.Menu__main {
-    padding: 0 15px;
+    .image1 img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
 
-    h2{
-    font-family: "Shrikhand","sans-serif";
-    position: relative;
+    .Menu__Title {
+    margin-top: -50px;
 
-        &::before{
-            @include mixins.Heart;
-        }
+        h2{
+        font-family: "Shrikhand","sans-serif";
+        position: relative;
+        padding: 20px;
+        border-radius:  30px 30px 0 0;
+        background: color.$MenuColor;
+
+            &::before{
+                @include mixins.Heart;
+            }
+            
+            &::after{
+                @include mixins.Heart($opacity: 0, $font-weight: 900,
+                $color: transparent);
+                @include mixins.gradient;
+            }
+
+            &:hover::after{
+                opacity: 1;
+                transform: translateY(-50%) scale(1.11);
+            }
         
-        &::after{
-            @include mixins.Heart($opacity: 0, $font-weight: 900,
-            $color: transparent);
-            @include mixins.gradient;
-        }
-
-        &:hover::after{
-            opacity: 1;
-            transform: translateY(-50%) scale(1.11);
         }
     }
+
+    .resto-main{
+        padding: 0 30px;
+        background: color.$MenuColor;
+    }
+
+    .Menus{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        margin-top: -20px;
+        @media (max-width: variables.$breakpoint689) {
+            grid-template-columns: 1fr;
+        }
+
+        .menus__category {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+
+            .menu-item{
+                display: flex;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                border-radius: 15px;
+                box-shadow: 0px 3px 12px 0px rgb(0 0 0 / 35%);
+
+                .menu-item__price{
+                    margin-left: auto;
+                    font-weight: 900;
+                    padding: 15px;
+                    display: flex;
+                    align-items: flex-end;
+
+                }
+
+                .menu-item__description{
+                    padding: 15px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+
+                    h4, p{
+                        margin: 0px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                .menu-item__check{
+                    $button-width: 60px;
+                    background-color: color.$Tertiaire;
+                    margin-right: -$button-width;
+                    width: 50px;
+                    border-radius: 0 15px 15px 0;
+                    transition: margin-right 0.5s;
+                    display: grid;
+                    place-items: center;
+                    
+                    i{
+                       display: grid;
+                       place-items: center;
+                       background: white;
+                       aspect-ratio: 1;
+                       width: 30px;
+                       border-radius: 15px; 
+                       color: color.$Tertiaire;
+                    }
+
+                }
+            }
+
+            &:hover {
+                .menu-item__check{
+                    margin-right: 0;
+                }
+
+                i{
+                    @include animation.spin;
+                    animation: spin 0.5s ease;
+                }
+
+            }
+
+        }
+    }
+
 }

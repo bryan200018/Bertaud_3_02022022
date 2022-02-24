@@ -54,89 +54,91 @@
 
 /*Menus*/
 
+#homepages{ 
 
-.menus{
-    background-color: #f6f6f6;
-    padding: 30px 20px;
+    .menus{
+        background-color: #f6f6f6;
+        padding: 30px 20px;
 
-    h2{
-        margin-bottom: 25px;
-    }
-
-    .MenusCards{
-        display: flex;
-        gap: 25px;
-        flex-wrap: wrap;
-
-        .Nouveau{
-            position: relative;
+        h2{
+            margin-bottom: 25px;
         }
 
-        .Nouveau::before{
-            content: "Nouveau";
-            position: absolute;
-            height: 30px;
-            width: 80px;
-            background-color: color.$Tertiaire;
-            text-align: center;
-            padding-top: 5px;
-            border-radius: 2px;
-            top: 15px;
-            right: 15px;
-            color: #299177;
-        }
-    }
+        .MenusCards{
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
 
-    .card{
-        flex-grow: 1;
-        min-width: 48%;
-        
-        & .card__image{            
-        height: 250px;
-        background-size: cover;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        }
-
-        &__image-1{            
-            background-image: url("../../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-        }
-
-        &__image-2{            
-            background-image: url("../../image/stil-u2Lp8tXIcjw-unsplash.jpg");
-        }
-
-        &__image-3{            
-            background-image: url("../../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-        }
-
-        &__image-4{            
-            background-image: url("../../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-        }
-
-        &__description{
-            position: relative;
-            background-color: white;
-            border-bottom-left-radius: 25px;
-            border-bottom-right-radius: 25px;
-
-            &::before{
-               @include mixins.Heart;
+            .Nouveau{
+                position: relative;
             }
+
+            .Nouveau::before{
+                content: "Nouveau";
+                position: absolute;
+                height: 30px;
+                width: 80px;
+                background-color: color.$Tertiaire;
+                text-align: center;
+                padding-top: 5px;
+                border-radius: 2px;
+                top: 15px;
+                right: 15px;
+                color: #299177;
+            }
+        }
+
+        .card{
+            flex-grow: 1;
+            min-width: 48%;
             
-            &::after{
-                @include mixins.Heart($opacity: 0, $font-weight: 900, $color: transparent);
-                @include mixins.gradient;
+            & .card__image{            
+            height: 250px;
+            background-size: cover;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
             }
 
-            &:hover::after{
-                opacity: 1;
-                transform: translateY(-50%) scale(1.11);
+            &__image-1{            
+                background-image: url("../../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
             }
 
-            h3,p{
-                padding: 10px;
-                margin: 0;
+            &__image-2{            
+                background-image: url("../../image/stil-u2Lp8tXIcjw-unsplash.jpg");
+            }
+
+            &__image-3{            
+                background-image: url("../../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+            }
+
+            &__image-4{            
+                background-image: url("../../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+            }
+
+            &__description{
+                position: relative;
+                background-color: white;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+
+                &::before{
+                @include mixins.Heart;
+                }
+                
+                &::after{
+                    @include mixins.Heart($opacity: 0, $font-weight: 900, $color: transparent);
+                    @include mixins.gradient;
+                }
+
+                &:hover::after{
+                    opacity: 1;
+                    transform: translateY(-50%) scale(1.11);
+                }
+
+                h3,p{
+                    padding: 10px;
+                    margin: 0;
+                }
             }
         }
     }
