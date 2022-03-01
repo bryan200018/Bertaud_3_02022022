@@ -1,21 +1,27 @@
-@mixin zoom {
-    transform: scale(1.05);
+@mixin zoom($zoom-level: 1.05, $transformation: none) {
+    transform: $transformation scale($zoom-level);
 }
 @mixin gradient($opacity: 1){
     background-image: linear-gradient(
         to top,
         rgba(147, 86, 220, $opacity),
         rgba(255, 121, 218, $opacity)
-    );
+    )
 }
-@mixin Heart($opacity: 1, $font-weight: 400, $color:inherit){
+
+@mixin font-awesome($font-weight: 400) {
     display: inline-block;
+    position: absolute;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     font-family: "Font Awesome 5 Free";
     font-weight: $font-weight;
+}
+
+@mixin Heart($opacity: 1, $font-weight: 400, $color:inherit){
+    @include font-awesome($font-weight);
     content: "\f004";
     font-size: 30px;
     position: absolute;

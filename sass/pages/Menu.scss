@@ -5,6 +5,26 @@
 
 #page-resto{
 
+    header{
+        &::before{ 
+        transition: transform 200ms ;
+        }
+
+        &:hover::before{
+            @include mixins.zoom(1.30, translateY(-50%));
+        }
+    
+        &::before{
+            @include mixins.font-awesome($font-weight: 900);
+            content: "\f060";
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 25px;
+        }
+        
+    }
+
     .image1 img{
         display: block;
         width: 100%;
@@ -45,13 +65,8 @@
     }
 
     .Menus{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 15px;
         margin-top: -20px;
-        @media (max-width: variables.$breakpoint1024) {
-            grid-template-columns: 1fr;
-        }
+       
 
         h3{
             text-transform: uppercase;
