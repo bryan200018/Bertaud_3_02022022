@@ -253,8 +253,15 @@ footer h2 {
   padding: 15px 0;
 }
 
-#page-resto header::before {
-  transition: transform 200ms;
+@keyframes colums-appear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 #page-resto header:hover::before {
   transform: translateY(-50%) scale(1.3);
@@ -273,6 +280,7 @@ footer h2 {
   top: 50%;
   transform: translateY(-50%);
   font-size: 25px;
+  transition: transform 200ms;
 }
 #page-resto .image1 img {
   display: block;
@@ -370,6 +378,17 @@ footer h2 {
   margin: 7px;
   border-radius: 15px;
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.35);
+  animation: colums-appear 1s;
+  animation-fill-mode: both;
+}
+#page-resto .Menus .menus__category .menu-item:nth-child(1) {
+  animation-delay: 250ms;
+}
+#page-resto .Menus .menus__category .menu-item:nth-child(2) {
+  animation-delay: 500ms;
+}
+#page-resto .Menus .menus__category .menu-item:nth-child(3) {
+  animation-delay: 750ms;
 }
 #page-resto .Menus .menus__category .menu-item .menu-item__price {
   margin-left: auto;
@@ -408,13 +427,13 @@ footer h2 {
   border-radius: 15px;
   color: #99e2d0;
 }
-#page-resto .Menus .menus__category:hover {
+#page-resto .Menus .menus__category .menu-item:hover {
   cursor: pointer;
 }
-#page-resto .Menus .menus__category:hover .menu-item__check {
+#page-resto .Menus .menus__category .menu-item:hover .menu-item__check {
   margin-right: 0;
 }
-#page-resto .Menus .menus__category:hover i {
+#page-resto .Menus .menus__category .menu-item:hover i {
   animation: spin 0.5s ease;
 }
 @keyframes spin {

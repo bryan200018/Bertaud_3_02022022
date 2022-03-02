@@ -6,9 +6,6 @@
 #page-resto{
 
     header{
-        &::before{ 
-        transition: transform 200ms ;
-        }
 
         &:hover::before{
             @include mixins.zoom(1.30, translateY(-50%));
@@ -21,6 +18,7 @@
             top: 50%;
             transform: translateY(-50%);
             font-size: 25px;
+            transition: transform 200ms;
         }
         
     }
@@ -88,6 +86,11 @@
             overflow: hidden;
 
             .menu-item{
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: 250ms * $i;
+                    }
+                }
                 display: flex;
                 background-color: white;
                 overflow: hidden;
@@ -96,6 +99,8 @@
                 margin: 7px;
                 border-radius: 15px;
                 box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 35%);
+                animation: colums-appear 1s;
+                animation-fill-mode: both;
 
                 .menu-item__price{
                     margin-left: auto;
@@ -139,24 +144,22 @@
                        border-radius: 15px; 
                        color: color.$Tertiaire;
                     }
+                }
 
+                &:hover {
+                    cursor: pointer;
+    
+                    .menu-item__check{
+                        margin-right: 0;
+                    }
+    
+                    i{
+                        @include animation.spin;
+                        animation: spin 0.5s ease;
+                    }
+    
                 }
             }
-
-            &:hover {
-                cursor: pointer;
-
-                .menu-item__check{
-                    margin-right: 0;
-                }
-
-                i{
-                    @include animation.spin;
-                    animation: spin 0.5s ease;
-                }
-
-            }
-
         }
     }
 
