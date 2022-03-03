@@ -11,6 +11,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+        padding: 21px;
     }
 
     & li{
@@ -92,7 +93,8 @@
             flex-grow: 1;
             min-width: 48%;
             
-            & .card__image{            
+            & .card__image{        
+            background-position: 50%;    
             height: 250px;
             background-size: cover;
             border-top-left-radius: 25px;
