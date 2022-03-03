@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  padding: 0 75px;
+  padding: 0 35px;
 }
 @media (max-width: 689px) {
   main {
@@ -345,7 +345,7 @@ footer h2 {
   transform: translateY(-50%) scale(1.11);
 }
 #page-resto .resto-main {
-  padding: 0 30px;
+  padding: 0 12px;
   background: #f6faf9;
 }
 #page-resto .Menus {
@@ -396,6 +396,7 @@ footer h2 {
   padding: 15px;
   display: flex;
   align-items: flex-end;
+  margin-right: 10px;
 }
 #page-resto .Menus .menus__category .menu-item .menu-item__description {
   padding: 15px;
