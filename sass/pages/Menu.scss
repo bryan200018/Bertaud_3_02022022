@@ -6,10 +6,6 @@
 #page-resto{
 
     header{
-
-        &:hover::before{
-            @include mixins.zoom(1.30, translateY(-50%));
-        }
     
         &::before{
             @include mixins.font-awesome($font-weight: 900);

@@ -1,5 +1,5 @@
-@mixin zoom($zoom-level: 1.05, $transformation: none) {
-    transform: $transformation scale($zoom-level);
+@mixin zoom{
+    transform: scale(1.05);
 }
 @mixin gradient($opacity: 1){
     background-image: linear-gradient(

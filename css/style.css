@@ -85,7 +85,7 @@ header {
   transition: transform 450ms;
 }
 .ButtonExplorer:hover {
-  transform: none scale(1.05);
+  transform: scale(1.05);
   opacity: 0.9;
 }
 
@@ -111,7 +111,7 @@ header {
   position: relative;
 }
 .fonctionnement li:hover {
-  transform: none scale(1.05);
+  transform: scale(1.05);
   opacity: 0.9;
 }
 .fonctionnement li i.fas {
@@ -264,9 +264,6 @@ footer h2 {
     transform: translateY(0);
     opacity: 1;
   }
-}
-#page-resto header:hover::before {
-  transform: translateY(-50%) scale(1.3);
 }
 #page-resto header::before {
   display: inline-block;
@@ -468,7 +465,7 @@ footer h2 {
   transition: transform 450ms;
 }
 #page-resto section.order button:hover {
-  transform: none scale(1.05);
+  transform: scale(1.05);
   opacity: 0.9;
 }
 
