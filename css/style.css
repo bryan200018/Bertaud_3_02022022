@@ -279,7 +279,6 @@ footer h2 {
   top: 50%;
   transform: translateY(-50%);
   font-size: 25px;
-  transition: transform 200ms;
 }
 #page-resto .image1 img {
   display: block;
